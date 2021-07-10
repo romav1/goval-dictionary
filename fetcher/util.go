@@ -152,7 +152,7 @@ func fetchFileWithUA(req fetchRequest) (body []byte, err error) {
 		return nil, fmt.Errorf("Download failed: %v", err)
 	}
 
-	httpreq.Header.Set("User-Agent", "curl/7.37.0")
+	httpreq.Header.Set("User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 (Chromium GOST)")
 	resp, err = httpClient.Do(httpreq)
 	if err != nil {
 		return nil, fmt.Errorf("Download failed: %v", err)
@@ -179,6 +179,7 @@ func fetchFileWithUA(req fetchRequest) (body []byte, err error) {
 	} else {
 		bytesBody = buf.Bytes()
 	}
+	fmt.Println("fetch 9")
 
 	return bytesBody, nil
 }

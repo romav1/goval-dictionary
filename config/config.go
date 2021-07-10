@@ -74,6 +74,9 @@ const (
 
 	// Amazon is
 	Amazon = "amazon"
+
+	// Scanoval is
+	Scanoval = "scanoval"
 )
 
 // Conf has Configuration
